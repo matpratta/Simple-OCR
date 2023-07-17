@@ -34,7 +34,10 @@ export default class FileProcessor {
     const keysRegex: Record<string, RegExp> = {};
     for (let key in keys) {
       keysRegex[key] = new RegExp(`${keys[key]}(.*)`, 'i');
-      result[key] = null;
+      result[key] = {
+        search: keys[key],
+        value: null,
+      };
     }
     
     // Processes each of the lines against our RegExp
@@ -42,7 +45,7 @@ export default class FileProcessor {
       for (let key in keysRegex) {
         const matches = keysRegex[key].exec(line.text);
         if (matches) {
-          result[key] = matches[1].trim();
+          result[key].value = matches[1].trim();
         }
       }
     });
