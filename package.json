@@ -1,0 +1,31 @@
+{
+  "name": "simple-ocr",
+  "version": "0.0.1",
+  "description": "Simple utility to OCR documents",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "npx tsc",
+    "watch": "npx tsc --watch",
+    "start": "npx tsc && node dist/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/matpratta/Simple-OCR.git"
+  },
+  "author": "Matheus Pratta",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/matpratta/Simple-OCR/issues"
+  },
+  "homepage": "https://github.com/matpratta/Simple-OCR#readme",
+  "dependencies": {
+    "sharp": "^0.32.3",
+    "tesseract.js": "^4.1.1",
+    "tmp": "^0.2.1",
+    "typescript": "^5.1.6"
+  },
+  "devDependencies": {
+    "@types/node": "^20.4.2",
+    "@types/tmp": "^0.2.3"
+  }
+}
